@@ -7,6 +7,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.example.testcreatingjar.kotlin.Testkotlin;
 
 public class HelloApplication extends Application {
     @Override
@@ -17,12 +18,15 @@ public class HelloApplication extends Application {
         btn.setLayoutY(100);
         btn.setPrefSize(100,40);
 
+        int x = new Testkotlin().hello();
+
+
         Text text = new Text();
         text.setLayoutY(200);
         text.setLayoutX(80);
         text.setFont(new Font(16));
         btn.setOnAction(actionEvent -> {
-            text.setText("Вы используете: " + System.getProperty("os.name"));
+            text.setText("Вы используете: " + System.getProperty("os.name") +  "  "+ x);
         });
 
         content.getChildren().add(btn);
@@ -39,6 +43,7 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(mainPane, 800,800);
         stage.setScene(scene);
         stage.setTitle("Testing creation jar");
+
         stage.show();
     }
 

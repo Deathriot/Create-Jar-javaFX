@@ -10,6 +10,7 @@ module org.example.testcreatingjar {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires kotlin.stdlib;
 
     opens org.example.testcreatingjar to javafx.fxml;
     exports org.example.testcreatingjar;
